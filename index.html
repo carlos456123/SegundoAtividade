@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Exemplo jQuery</title>
+
+  <!-- Importando jQuery -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+
+  <button id="btn-detalhes">Mostrar/Ocultar Detalhes</button>
+  <button id="btn-limpar">Limpar Mensagem</button>
+
+  <div id="detalhes">
+    <p>Esses são os detalhes do produto.</p>
+  </div>
+
+  <p id="mensagem">Mensagem importante!</p>
+
+  <script>
+    $(document).ready(function() {
+
+      // Alternar visibilidade dos detalhes
+      $("#btn-detalhes").click(function() {
+        $("#detalhes").toggle();
+      });
+
+      // Limpar o texto da mensagem
+      $("#btn-limpar").click(function() {
+        $("#mensagem").text("");
+      });
+
+    });
+  </script>
+
+</body>
+</html>

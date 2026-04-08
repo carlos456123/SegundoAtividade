@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Lista de Produtos</title>
+</head>
+<body>
+
+  <ul id="lista-produtos"></ul>
+
+  <script>
+    function adicionarProduto(nome, preco) {
+      const lista = document.getElementById("lista-produtos");
+      const novoItem = document.createElement("li");
+      novoItem.textContent = `${nome} - R$ ${preco.toFixed(2)}`;
+      lista.appendChild(novoItem);
+    }
+
+    
+    adicionarProduto("Amortecedor", 330);
+    adicionarProduto("Pastilha de Freio", 100);
+  </script>
+
+</body>
+</html>
